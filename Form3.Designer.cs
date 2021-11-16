@@ -29,7 +29,6 @@ namespace Agencia_de_viajes
         /// </summary>
         private void InitializeComponent()
         {
-            this.dtSugerencias = new System.Windows.Forms.DataGridView();
             this.ListaPaises = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblEscribeUnPais = new System.Windows.Forms.Label();
             this.txtPaises = new System.Windows.Forms.TextBox();
@@ -38,19 +37,9 @@ namespace Agencia_de_viajes
             this.lblDireccion = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.dtSugerencias = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dtSugerencias)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dtSugerencias
-            // 
-            this.dtSugerencias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtSugerencias.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ListaPaises});
-            this.dtSugerencias.Location = new System.Drawing.Point(12, 344);
-            this.dtSugerencias.Name = "dtSugerencias";
-            this.dtSugerencias.RowTemplate.Height = 25;
-            this.dtSugerencias.Size = new System.Drawing.Size(243, 145);
-            this.dtSugerencias.TabIndex = 1;
             // 
             // ListaPaises
             // 
@@ -134,6 +123,15 @@ namespace Agencia_de_viajes
             this.label2.TabIndex = 8;
             this.label2.Text = "Calle Verdadera 789, Córdoba";
             // 
+            // dtSugerencias
+            // 
+            this.dtSugerencias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtSugerencias.Location = new System.Drawing.Point(12, 340);
+            this.dtSugerencias.Name = "dtSugerencias";
+            this.dtSugerencias.RowTemplate.Height = 25;
+            this.dtSugerencias.Size = new System.Drawing.Size(188, 147);
+            this.dtSugerencias.TabIndex = 9;
+            // 
             // Consultas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -141,6 +139,7 @@ namespace Agencia_de_viajes
             this.BackgroundImage = global::Agencia_de_viajes.Properties.Resources.Consultas_ahorasi;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(751, 501);
+            this.Controls.Add(this.dtSugerencias);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblDireccion);
@@ -148,7 +147,6 @@ namespace Agencia_de_viajes
             this.Controls.Add(this.btDesear);
             this.Controls.Add(this.txtPaises);
             this.Controls.Add(this.lblEscribeUnPais);
-            this.Controls.Add(this.dtSugerencias);
             this.Name = "Consultas";
             this.Text = "Form3";
             this.Load += new System.EventHandler(this.Consultas_Load);
@@ -168,5 +166,6 @@ namespace Agencia_de_viajes
         private System.Windows.Forms.Label lblDireccion;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        //private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

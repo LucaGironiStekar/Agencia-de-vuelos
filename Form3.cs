@@ -10,12 +10,18 @@ namespace Agencia_de_viajes
 {
     public partial class Consultas : Form
     {
-        //public System.Data.DataTable dtSugerencias = new DataTable();
+
+        public Pais Pap = new Pais();
+        
 
         public Consultas()
         {
             InitializeComponent();
+
+            dtSugerencias.DataSource = Pap.ListaPaises;
+
         }
+
 
         private void Consultas_Load(object sender, EventArgs e)
         {
@@ -24,9 +30,9 @@ namespace Agencia_de_viajes
 
         private void btDesear_Click(object sender, EventArgs e)
         {
-            int n = dtSugerencias.Rows.Add();
-            dtSugerencias.Rows[n].Cells[0].Value = txtPaises;
-            txtPaises.Text = "";
+            Pap.GuardarPais(txtPaises.Text);
+            dtSugerencias.Refresh();
+
         }
 
         private void button1_Click(object sender, EventArgs e)
